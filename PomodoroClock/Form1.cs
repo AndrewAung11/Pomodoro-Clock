@@ -4,10 +4,10 @@ using System.Timers;
 
 namespace PomodoroClock
 {
-    public partial class pomodoClock : Form
+    public partial class PomodoClock : Form
     {
 
-        public pomodoClock()
+        public PomodoClock()
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             InitializeComponent();

@@ -16,7 +16,7 @@ namespace PomodoroClock
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new pomodoClock());
+            Application.Run(new PomodoClock());
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace PomodoroClock
 {
-    partial class pomodoClock
+    partial class PomodoClock
     {
         /// <summary>
         /// Required designer variable.
@@ -165,7 +165,7 @@ namespace PomodoroClock
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = true;
             // 
-            // pomodoClock
+            // PomodoClock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -184,7 +184,7 @@ namespace PomodoroClock
             this.Controls.Add(this.timeLabel);
             this.MaximumSize = new System.Drawing.Size(500, 500);
             this.MinimumSize = new System.Drawing.Size(400, 400);
-            this.Name = "pomodoClock";
+            this.Name = "PomodoClock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pomodoro Clock";
             this.ResumeLayout(false);
