@@ -1,7 +1,7 @@
 ﻿
 namespace PomodoroClock
 {
-    partial class Form1
+    partial class pomodoClock
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,183 @@ namespace PomodoroClock
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Label();
+            this.sessionLabel = new System.Windows.Forms.Label();
+            this.breakLabel = new System.Windows.Forms.Label();
+            this.sessionLength = new System.Windows.Forms.Label();
+            this.breakLength = new System.Windows.Forms.Label();
+            this.sessionInc = new System.Windows.Forms.Button();
+            this.breakInc = new System.Windows.Forms.Button();
+            this.sessionDec = new System.Windows.Forms.Button();
+            this.breakDec = new System.Windows.Forms.Button();
+            this.btn_sot = new System.Windows.Forms.Button();
+            this.btn_reset = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabel.Location = new System.Drawing.Point(168, 20);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(163, 46);
+            this.timeLabel.TabIndex = 0;
+            this.timeLabel.Text = "Session";
+            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer
+            // 
+            this.timer.AutoSize = true;
+            this.timer.Font = new System.Drawing.Font("MS Reference Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timer.Location = new System.Drawing.Point(190, 66);
+            this.timer.Name = "timer";
+            this.timer.Size = new System.Drawing.Size(116, 40);
+            this.timer.TabIndex = 1;
+            this.timer.Text = "25:00";
+            this.timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sessionLabel
+            // 
+            this.sessionLabel.AutoSize = true;
+            this.sessionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sessionLabel.Location = new System.Drawing.Point(12, 140);
+            this.sessionLabel.Name = "sessionLabel";
+            this.sessionLabel.Size = new System.Drawing.Size(179, 29);
+            this.sessionLabel.TabIndex = 2;
+            this.sessionLabel.Text = "Session Length";
+            // 
+            // breakLabel
+            // 
+            this.breakLabel.AutoSize = true;
+            this.breakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakLabel.Location = new System.Drawing.Point(317, 140);
+            this.breakLabel.Name = "breakLabel";
+            this.breakLabel.Size = new System.Drawing.Size(155, 29);
+            this.breakLabel.TabIndex = 3;
+            this.breakLabel.Text = "Break Length";
+            // 
+            // sessionLength
+            // 
+            this.sessionLength.AutoSize = true;
+            this.sessionLength.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sessionLength.Location = new System.Drawing.Point(75, 169);
+            this.sessionLength.Name = "sessionLength";
+            this.sessionLength.Size = new System.Drawing.Size(47, 34);
+            this.sessionLength.TabIndex = 4;
+            this.sessionLength.Text = "25";
+            // 
+            // breakLength
+            // 
+            this.breakLength.AutoSize = true;
+            this.breakLength.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakLength.Location = new System.Drawing.Point(377, 169);
+            this.breakLength.Name = "breakLength";
+            this.breakLength.Size = new System.Drawing.Size(31, 34);
+            this.breakLength.TabIndex = 5;
+            this.breakLength.Text = "5";
+            // 
+            // sessionInc
+            // 
+            this.sessionInc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sessionInc.Location = new System.Drawing.Point(34, 172);
+            this.sessionInc.Name = "sessionInc";
+            this.sessionInc.Size = new System.Drawing.Size(35, 31);
+            this.sessionInc.TabIndex = 6;
+            this.sessionInc.Text = "+";
+            this.sessionInc.UseVisualStyleBackColor = true;
+            // 
+            // breakInc
+            // 
+            this.breakInc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakInc.Location = new System.Drawing.Point(336, 172);
+            this.breakInc.Name = "breakInc";
+            this.breakInc.Size = new System.Drawing.Size(35, 31);
+            this.breakInc.TabIndex = 7;
+            this.breakInc.Text = "+";
+            this.breakInc.UseVisualStyleBackColor = true;
+            // 
+            // sessionDec
+            // 
+            this.sessionDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sessionDec.Location = new System.Drawing.Point(128, 172);
+            this.sessionDec.Name = "sessionDec";
+            this.sessionDec.Size = new System.Drawing.Size(35, 31);
+            this.sessionDec.TabIndex = 8;
+            this.sessionDec.Text = "-";
+            this.sessionDec.UseVisualStyleBackColor = true;
+            // 
+            // breakDec
+            // 
+            this.breakDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakDec.Location = new System.Drawing.Point(414, 172);
+            this.breakDec.Name = "breakDec";
+            this.breakDec.Size = new System.Drawing.Size(35, 31);
+            this.breakDec.TabIndex = 9;
+            this.breakDec.Text = "-";
+            this.breakDec.UseVisualStyleBackColor = true;
+            // 
+            // btn_sot
+            // 
+            this.btn_sot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sot.Location = new System.Drawing.Point(55, 300);
+            this.btn_sot.Name = "btn_sot";
+            this.btn_sot.Size = new System.Drawing.Size(160, 45);
+            this.btn_sot.TabIndex = 10;
+            this.btn_sot.Text = "Start / Pause";
+            this.btn_sot.UseVisualStyleBackColor = true;
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reset.Location = new System.Drawing.Point(271, 300);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(160, 45);
+            this.btn_reset.TabIndex = 11;
+            this.btn_reset.Text = "Reset";
+            this.btn_reset.UseVisualStyleBackColor = true;
+            // 
+            // pomodoClock
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.btn_reset);
+            this.Controls.Add(this.btn_sot);
+            this.Controls.Add(this.breakDec);
+            this.Controls.Add(this.sessionDec);
+            this.Controls.Add(this.breakInc);
+            this.Controls.Add(this.sessionInc);
+            this.Controls.Add(this.breakLength);
+            this.Controls.Add(this.sessionLength);
+            this.Controls.Add(this.breakLabel);
+            this.Controls.Add(this.sessionLabel);
+            this.Controls.Add(this.timer);
+            this.Controls.Add(this.timeLabel);
+            this.MaximumSize = new System.Drawing.Size(500, 500);
+            this.MinimumSize = new System.Drawing.Size(400, 400);
+            this.Name = "pomodoClock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Pomodoro Clock";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Label timer;
+        private System.Windows.Forms.Label sessionLabel;
+        private System.Windows.Forms.Label breakLabel;
+        private System.Windows.Forms.Label sessionLength;
+        private System.Windows.Forms.Label breakLength;
+        private System.Windows.Forms.Button sessionInc;
+        private System.Windows.Forms.Button breakInc;
+        private System.Windows.Forms.Button sessionDec;
+        private System.Windows.Forms.Button breakDec;
+        private System.Windows.Forms.Button btn_sot;
+        private System.Windows.Forms.Button btn_reset;
     }
 }
 
