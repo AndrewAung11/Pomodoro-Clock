@@ -99,11 +99,11 @@ namespace PomodoroClock
             // 
             this.breakLength.AutoSize = true;
             this.breakLength.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakLength.Location = new System.Drawing.Point(377, 169);
+            this.breakLength.Location = new System.Drawing.Point(372, 169);
             this.breakLength.Name = "breakLength";
-            this.breakLength.Size = new System.Drawing.Size(31, 34);
+            this.breakLength.Size = new System.Drawing.Size(47, 34);
             this.breakLength.TabIndex = 5;
-            this.breakLength.Text = "5";
+            this.breakLength.Text = "05";
             // 
             // sessionInc
             // 
@@ -114,16 +114,18 @@ namespace PomodoroClock
             this.sessionInc.TabIndex = 6;
             this.sessionInc.Text = "+";
             this.sessionInc.UseVisualStyleBackColor = true;
+            this.sessionInc.Click += new System.EventHandler(this.sessionInc_Click);
             // 
             // breakInc
             // 
             this.breakInc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakInc.Location = new System.Drawing.Point(336, 172);
+            this.breakInc.Location = new System.Drawing.Point(331, 172);
             this.breakInc.Name = "breakInc";
             this.breakInc.Size = new System.Drawing.Size(35, 31);
             this.breakInc.TabIndex = 7;
             this.breakInc.Text = "+";
             this.breakInc.UseVisualStyleBackColor = true;
+            this.breakInc.Click += new System.EventHandler(this.breakInc_Click);
             // 
             // sessionDec
             // 
@@ -134,16 +136,18 @@ namespace PomodoroClock
             this.sessionDec.TabIndex = 8;
             this.sessionDec.Text = "-";
             this.sessionDec.UseVisualStyleBackColor = true;
+            this.sessionDec.Click += new System.EventHandler(this.sessionDec_Click);
             // 
             // breakDec
             // 
             this.breakDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakDec.Location = new System.Drawing.Point(414, 172);
+            this.breakDec.Location = new System.Drawing.Point(425, 172);
             this.breakDec.Name = "breakDec";
             this.breakDec.Size = new System.Drawing.Size(35, 31);
             this.breakDec.TabIndex = 9;
             this.breakDec.Text = "-";
             this.breakDec.UseVisualStyleBackColor = true;
+            this.breakDec.Click += new System.EventHandler(this.breakDec_Click);
             // 
             // btn_sot
             // 
@@ -154,6 +158,7 @@ namespace PomodoroClock
             this.btn_sot.TabIndex = 10;
             this.btn_sot.Text = "Start / Pause";
             this.btn_sot.UseVisualStyleBackColor = true;
+            this.btn_sot.Click += new System.EventHandler(this.btn_sot_Click);
             // 
             // btn_reset
             // 
@@ -164,6 +169,7 @@ namespace PomodoroClock
             this.btn_reset.TabIndex = 11;
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // PomodoClock
             // 
