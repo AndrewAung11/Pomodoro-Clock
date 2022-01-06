@@ -163,7 +163,7 @@ namespace PomodoroClock
             // btn_reset
             // 
             this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reset.Location = new System.Drawing.Point(271, 300);
+            this.btn_reset.Location = new System.Drawing.Point(272, 300);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(160, 45);
             this.btn_reset.TabIndex = 11;
