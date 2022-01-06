@@ -47,7 +47,7 @@ namespace PomodoroClock
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(168, 20);
+            this.timeLabel.Location = new System.Drawing.Point(165, 20);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(163, 46);
             this.timeLabel.TabIndex = 0;

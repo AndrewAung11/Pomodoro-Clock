@@ -14,14 +14,14 @@ namespace PomodoroClock
         }
 
         private System.Timers.Timer interval;
-        private int[] lengths = {25, 0};
+        private int[] lengths = {25, 5};
         System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer($@"{Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString())}\BeepSound.wav");
 
         // Session length
         // Increase button
         private void sessionInc_Click(object sender, EventArgs e)
         {
-            if (timeLabel.Text == "Session" || interval == null || interval.Enabled == false)
+            if (timeLabel.Text != "Session" || interval == null || interval.Enabled == false)
             {
                 if (lengths[0] < 60)
                 {
@@ -39,7 +39,14 @@ namespace PomodoroClock
 
                 if (timeLabel.Text == "Session")
                 {
-                    timer.Text = $"{lengths[0]}:00";
+                    if (lengths[0] < 10)
+                    {
+                        timer.Text = $"0{lengths[0]}:00";
+                    }
+                    else
+                    {
+                        timer.Text = $"{lengths[0]}:00";
+                    }
                 }
             }
         }
@@ -47,7 +54,7 @@ namespace PomodoroClock
         // Decrease button
         private void sessionDec_Click(object sender, EventArgs e)
         {
-            if (timeLabel.Text == "Session" || interval == null || interval.Enabled == false)
+            if (timeLabel.Text != "Session" || interval == null || interval.Enabled == false)
             {
                 if (lengths[0] > 1)
                 {
@@ -65,7 +72,13 @@ namespace PomodoroClock
 
                 if (timeLabel.Text == "Session")
                 {
-                    timer.Text = $"{lengths[0]}:00";
+                    if (lengths[0] < 10)
+                    {
+                        timer.Text = $"0{lengths[0]}:00";
+                    } else
+                    {
+                        timer.Text = $"{lengths[0]}:00";
+                    }
                 }
             }
         }
@@ -74,7 +87,7 @@ namespace PomodoroClock
         // Increase button
         private void breakInc_Click(object sender, EventArgs e)
         {
-            if (timeLabel.Text == "Break" || interval == null || interval.Enabled == false)
+            if (timeLabel.Text != "Break" || interval == null || interval.Enabled == false)
             {
                 if (lengths[1] < 60)
                 {
@@ -92,7 +105,14 @@ namespace PomodoroClock
 
                 if (timeLabel.Text == "Break")
                 {
-                    timer.Text = $"{lengths[1]}:00";
+                    if (lengths[1] < 10)
+                    {
+                        timer.Text = $"0{lengths[1]}:00";
+                    }
+                    else
+                    {
+                        timer.Text = $"{lengths[1]}:00";
+                    }
                 }
             }
         }
@@ -100,7 +120,7 @@ namespace PomodoroClock
         // Decrease button
         private void breakDec_Click(object sender, EventArgs e)
         {
-            if (timeLabel.Text == "Break" || interval == null || interval.Enabled == false)
+            if (timeLabel.Text != "Break" || interval == null || interval.Enabled == false)
             {
                 if (lengths[1] > 1)
                 {
@@ -118,7 +138,13 @@ namespace PomodoroClock
 
                 if (timeLabel.Text == "Break")
                 {
-                    timer.Text = $"{lengths[1]}:00";
+                    if (lengths[1] < 10)
+                    {
+                        timer.Text = $"0{lengths[1]}:00";
+                    } else
+                    {
+                        timer.Text = $"{lengths[1]}:00";
+                    }
                 }
             }
         }
@@ -149,10 +175,7 @@ namespace PomodoroClock
         // Reset button
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            if (interval != null)
-            {
-                interval = null;
-            }
+            interval.Enabled = false;
             lengths[0] = 25;
             lengths[1] = 5;
             sessionLength.Text = lengths[0].ToString();
@@ -173,20 +196,52 @@ namespace PomodoroClock
                 {
                     min = lengths[0];
                 }
+                if (timeLabel.Text == "Break")
+                {
+                    min = lengths[0];
+                }
             }
             if (sec == 0 && min > 0)
             {
                 min = min - 1;
                 sec = sec + 60;
             }
-            sec--;
+
+            if (sec > 0)
+            {
+                sec--;
+            }
+
+            // Formatting
+            if (min < 10 || sec < 10)
+            {
+                string minStr = min.ToString();
+                string secStr = sec.ToString();
+                if (min < 10)
+                {
+                    minStr = $"0{min}";
+                }
+                if (sec < 10)
+                {
+                    secStr = $"0{sec}";
+                }
+                Invoke(new Action(() => { timer.Text = $"{minStr}:{secStr}"; }));
+            }
+
+            // Time change
             fired++;
-            if (timeLabel.Text == "Session" && fired == (lengths[0] * 60))
+            if (timeLabel.Text == "Session" && fired == (lengths[0] * 60) && sec == 0)
             {
                 fired = 0;
-                timeLabel.Text = "Break";
+                Invoke(new Action(() => { timeLabel.Text = "Break"; timeLabel.SetBounds(189, 20, 124, 46); }));
+                soundPlayer.Play();
+            } else if (timeLabel.Text == "Break" && fired == (lengths[1] * 60) && sec == 0)
+            {
+                fired = 0;
+                Invoke(new Action(() => { timeLabel.Text = "Session"; timeLabel.SetBounds(165, 20, 163, 46); }));
                 soundPlayer.Play();
             }
+            // 165, 20, 163, 46
         }
     }
 }
