@@ -157,6 +157,7 @@ namespace PomodoroClock
                 interval = new System.Timers.Timer(1000);
                 interval.Elapsed += OnTimeEvent;
                 interval.AutoReset = true;
+                interval.Enabled = false;
             }
             if (interval.Enabled == true)
             {
@@ -175,7 +176,10 @@ namespace PomodoroClock
         // Reset button
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            interval.Enabled = false;
+            if (interval != null && interval.Enabled == true)
+            {
+                interval.Enabled = false;
+            }
             lengths[0] = 25;
             lengths[1] = 5;
             sessionLength.Text = lengths[0].ToString();
@@ -201,7 +205,7 @@ namespace PomodoroClock
                     min = lengths[0];
                 }
             }
-            if (sec == 0 && min > 0)
+            if (sec == 0 && min >= 1)
             {
                 min = min - 1;
                 sec = sec + 60;
@@ -213,20 +217,17 @@ namespace PomodoroClock
             }
 
             // Formatting
-            if (min < 10 || sec < 10)
+            string minStr = min.ToString();
+            string secStr = sec.ToString();
+            if (min < 10)
             {
-                string minStr = min.ToString();
-                string secStr = sec.ToString();
-                if (min < 10)
-                {
-                    minStr = $"0{min}";
-                }
-                if (sec < 10)
-                {
-                    secStr = $"0{sec}";
-                }
-                Invoke(new Action(() => { timer.Text = $"{minStr}:{secStr}"; }));
+                minStr = $"0{min}";
             }
+            if (sec < 10)
+            {
+                secStr = $"0{sec}";
+            }
+            Invoke(new Action(() => { timer.Text = $"{minStr}:{secStr}"; }));
 
             // Time change
             fired++;
