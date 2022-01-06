@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -14,7 +15,7 @@ namespace PomodoroClock
 
         private System.Timers.Timer interval;
         private int[] lengths = {25, 0};
-        System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer(@".\BeepSound.wav");
+        System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer($@"{Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString())}\BeepSound.wav");
 
         // Session length
         // Increase button
