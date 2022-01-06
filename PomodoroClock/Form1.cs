@@ -241,7 +241,6 @@ namespace PomodoroClock
                 Invoke(new Action(() => { timeLabel.Text = "Session"; timeLabel.SetBounds(165, 20, 163, 46); }));
                 soundPlayer.Play();
             }
-            // 165, 20, 163, 46
         }
     }
 }
