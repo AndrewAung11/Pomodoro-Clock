@@ -11,6 +11,5 @@ There is no way to install yet.
 These are the things I want to accomplish:
 - [x] Make a basic UI
 - [ ] Make a working timer with intervals
-- [ ] Use Pomodoro Technique
 - [ ] Add audio as alarm
 - [ ] Polish the UI
