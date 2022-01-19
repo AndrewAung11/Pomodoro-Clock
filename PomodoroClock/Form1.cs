@@ -243,5 +243,28 @@ namespace PomodoroClock
                 soundPlayer.Play();
             }
         }
+
+
+        // This event handler will disable closing the form when starting a session
+        // triggered when user clicks the close button
+        private void PomodoClock_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            // check if session is started
+            if(interval.Enabled == true)
+            {
+
+                interval.Enabled = false; // we pause the session for a breif moment
+                e.Cancel = true; // setting this property to false will prevent the form from closing
+
+                // show a message box
+                // it return a dialog result
+                DialogResult r = MessageBox.Show("A session is running currently","Alert",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                if(r == DialogResult.OK) // check if user clicked ok on the dialog box
+                {
+                    interval.Enabled = true; // resume the session
+                }
+            }
+        }
     }
 }
