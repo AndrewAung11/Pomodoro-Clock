@@ -48,9 +48,10 @@ namespace PomodoroClock
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(165, 20);
+            this.timeLabel.Location = new System.Drawing.Point(220, 25);
+            this.timeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(163, 46);
+            this.timeLabel.Size = new System.Drawing.Size(203, 58);
             this.timeLabel.TabIndex = 0;
             this.timeLabel.Text = "Session";
             this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,9 +60,10 @@ namespace PomodoroClock
             // 
             this.timer.AutoSize = true;
             this.timer.Font = new System.Drawing.Font("MS Reference Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timer.Location = new System.Drawing.Point(190, 66);
+            this.timer.Location = new System.Drawing.Point(253, 81);
+            this.timer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timer.Name = "timer";
-            this.timer.Size = new System.Drawing.Size(116, 40);
+            this.timer.Size = new System.Drawing.Size(149, 52);
             this.timer.TabIndex = 1;
             this.timer.Text = "25:00";
             this.timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,9 +72,10 @@ namespace PomodoroClock
             // 
             this.sessionLabel.AutoSize = true;
             this.sessionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sessionLabel.Location = new System.Drawing.Point(12, 140);
+            this.sessionLabel.Location = new System.Drawing.Point(16, 172);
+            this.sessionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sessionLabel.Name = "sessionLabel";
-            this.sessionLabel.Size = new System.Drawing.Size(179, 29);
+            this.sessionLabel.Size = new System.Drawing.Size(222, 36);
             this.sessionLabel.TabIndex = 2;
             this.sessionLabel.Text = "Session Length";
             // 
@@ -80,9 +83,10 @@ namespace PomodoroClock
             // 
             this.breakLabel.AutoSize = true;
             this.breakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakLabel.Location = new System.Drawing.Point(317, 140);
+            this.breakLabel.Location = new System.Drawing.Point(423, 172);
+            this.breakLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.breakLabel.Name = "breakLabel";
-            this.breakLabel.Size = new System.Drawing.Size(155, 29);
+            this.breakLabel.Size = new System.Drawing.Size(192, 36);
             this.breakLabel.TabIndex = 3;
             this.breakLabel.Text = "Break Length";
             // 
@@ -90,9 +94,10 @@ namespace PomodoroClock
             // 
             this.sessionLength.AutoSize = true;
             this.sessionLength.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sessionLength.Location = new System.Drawing.Point(75, 169);
+            this.sessionLength.Location = new System.Drawing.Point(100, 208);
+            this.sessionLength.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sessionLength.Name = "sessionLength";
-            this.sessionLength.Size = new System.Drawing.Size(47, 34);
+            this.sessionLength.Size = new System.Drawing.Size(59, 43);
             this.sessionLength.TabIndex = 4;
             this.sessionLength.Text = "25";
             // 
@@ -100,18 +105,20 @@ namespace PomodoroClock
             // 
             this.breakLength.AutoSize = true;
             this.breakLength.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakLength.Location = new System.Drawing.Point(372, 169);
+            this.breakLength.Location = new System.Drawing.Point(496, 208);
+            this.breakLength.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.breakLength.Name = "breakLength";
-            this.breakLength.Size = new System.Drawing.Size(47, 34);
+            this.breakLength.Size = new System.Drawing.Size(59, 43);
             this.breakLength.TabIndex = 5;
             this.breakLength.Text = "05";
             // 
             // sessionInc
             // 
             this.sessionInc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sessionInc.Location = new System.Drawing.Point(34, 172);
+            this.sessionInc.Location = new System.Drawing.Point(45, 212);
+            this.sessionInc.Margin = new System.Windows.Forms.Padding(4);
             this.sessionInc.Name = "sessionInc";
-            this.sessionInc.Size = new System.Drawing.Size(35, 31);
+            this.sessionInc.Size = new System.Drawing.Size(47, 38);
             this.sessionInc.TabIndex = 6;
             this.sessionInc.Text = "+";
             this.sessionInc.UseVisualStyleBackColor = true;
@@ -120,9 +127,10 @@ namespace PomodoroClock
             // breakInc
             // 
             this.breakInc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakInc.Location = new System.Drawing.Point(331, 172);
+            this.breakInc.Location = new System.Drawing.Point(441, 212);
+            this.breakInc.Margin = new System.Windows.Forms.Padding(4);
             this.breakInc.Name = "breakInc";
-            this.breakInc.Size = new System.Drawing.Size(35, 31);
+            this.breakInc.Size = new System.Drawing.Size(47, 38);
             this.breakInc.TabIndex = 7;
             this.breakInc.Text = "+";
             this.breakInc.UseVisualStyleBackColor = true;
@@ -131,9 +139,10 @@ namespace PomodoroClock
             // sessionDec
             // 
             this.sessionDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sessionDec.Location = new System.Drawing.Point(128, 172);
+            this.sessionDec.Location = new System.Drawing.Point(171, 212);
+            this.sessionDec.Margin = new System.Windows.Forms.Padding(4);
             this.sessionDec.Name = "sessionDec";
-            this.sessionDec.Size = new System.Drawing.Size(35, 31);
+            this.sessionDec.Size = new System.Drawing.Size(47, 38);
             this.sessionDec.TabIndex = 8;
             this.sessionDec.Text = "-";
             this.sessionDec.UseVisualStyleBackColor = true;
@@ -142,9 +151,10 @@ namespace PomodoroClock
             // breakDec
             // 
             this.breakDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakDec.Location = new System.Drawing.Point(425, 172);
+            this.breakDec.Location = new System.Drawing.Point(567, 212);
+            this.breakDec.Margin = new System.Windows.Forms.Padding(4);
             this.breakDec.Name = "breakDec";
-            this.breakDec.Size = new System.Drawing.Size(35, 31);
+            this.breakDec.Size = new System.Drawing.Size(47, 38);
             this.breakDec.TabIndex = 9;
             this.breakDec.Text = "-";
             this.breakDec.UseVisualStyleBackColor = true;
@@ -153,9 +163,10 @@ namespace PomodoroClock
             // btn_sot
             // 
             this.btn_sot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sot.Location = new System.Drawing.Point(55, 300);
+            this.btn_sot.Location = new System.Drawing.Point(73, 369);
+            this.btn_sot.Margin = new System.Windows.Forms.Padding(4);
             this.btn_sot.Name = "btn_sot";
-            this.btn_sot.Size = new System.Drawing.Size(160, 45);
+            this.btn_sot.Size = new System.Drawing.Size(213, 55);
             this.btn_sot.TabIndex = 10;
             this.btn_sot.Text = "Start / Pause";
             this.btn_sot.UseVisualStyleBackColor = true;
@@ -164,9 +175,10 @@ namespace PomodoroClock
             // btn_reset
             // 
             this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reset.Location = new System.Drawing.Point(272, 300);
+            this.btn_reset.Location = new System.Drawing.Point(363, 369);
+            this.btn_reset.Margin = new System.Windows.Forms.Padding(4);
             this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Size = new System.Drawing.Size(160, 45);
+            this.btn_reset.Size = new System.Drawing.Size(213, 55);
             this.btn_reset.TabIndex = 11;
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = true;
@@ -174,9 +186,9 @@ namespace PomodoroClock
             // 
             // PomodoClock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(643, 558);
             this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.btn_sot);
             this.Controls.Add(this.breakDec);
@@ -190,11 +202,14 @@ namespace PomodoroClock
             this.Controls.Add(this.timer);
             this.Controls.Add(this.timeLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(500, 500);
-            this.MinimumSize = new System.Drawing.Size(400, 400);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(661, 605);
+            this.MinimumSize = new System.Drawing.Size(527, 481);
             this.Name = "PomodoClock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pomodoro Clock";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PomodoClock_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
