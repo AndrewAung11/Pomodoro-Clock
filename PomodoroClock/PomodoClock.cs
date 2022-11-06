@@ -199,10 +199,20 @@ namespace PomodoroClock
                 if (timeLabel.Text == "Session")
                 {
                     min = lengths[0];
+
+                    // Pop up dialog when session has started
+                    DialogResult r = MessageBox.Show("Session has started!", "Session Alert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 if (timeLabel.Text == "Break")
                 {
                     min = lengths[0];
+
+                    // Pop up dialog when break has started
+                    DialogResult r = MessageBox.Show("It is break time!", "Break Alert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    if (r == DialogResult.OK)
+                    {
+                        soundPlayer.Stop(); // will stop the audio playing as alarm if it is still playing
+                    }
                 }
             }
             if (sec == 0 && min >= 1)
