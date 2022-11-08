@@ -261,7 +261,7 @@ namespace PomodoroClock
         {
 
             // check if session is started
-            if(interval.Enabled == true)
+            if(interval != null && interval.Enabled)
             {
 
                 interval.Enabled = false; // we pause the session for a breif moment
