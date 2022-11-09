@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroClock", "PomodoroClock.csproj", "{70FFB7B1-DF6F-40AB-915D-A661DFD7093B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroClock", "PomodoroClock.csproj", "{A589BA5F-6F16-42BF-B762-0EE834D1E65C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{70FFB7B1-DF6F-40AB-915D-A661DFD7093B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70FFB7B1-DF6F-40AB-915D-A661DFD7093B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70FFB7B1-DF6F-40AB-915D-A661DFD7093B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70FFB7B1-DF6F-40AB-915D-A661DFD7093B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A589BA5F-6F16-42BF-B762-0EE834D1E65C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A589BA5F-6F16-42BF-B762-0EE834D1E65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A589BA5F-6F16-42BF-B762-0EE834D1E65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A589BA5F-6F16-42BF-B762-0EE834D1E65C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6B047F4A-15E2-4F5A-A975-FF88DBFCD16D}
+		SolutionGuid = {3BAF4BCD-BEB6-4E39-AF5A-615F32DC3FCC}
 	EndGlobalSection
 EndGlobal
