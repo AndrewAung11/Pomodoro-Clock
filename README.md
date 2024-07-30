@@ -12,4 +12,5 @@ These are the things I want to accomplish:
 - [x] Make a basic UI
 - [x] Make a working timer with intervals
 - [x] Add audio as alarm
-- [ ] Polish the UI
+- [X] Polish the UI
+- [ ] Add a way to install
