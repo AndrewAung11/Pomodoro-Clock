@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Timers;
+using Reminders.WindowsSoundRepeaterLibrary;
 using System.Windows.Forms;
 
 namespace PomodoroClock
@@ -15,7 +16,6 @@ namespace PomodoroClock
 
         private System.Timers.Timer interval;
         private int[] lengths = {25, 5};
-        System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer($@"{Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString())}\BeepSound.wav");
 
         // Session length
         // Increase button
@@ -192,7 +192,7 @@ namespace PomodoroClock
         }
 
         // Interval
-        private void OnTimeEvent(Object source, ElapsedEventArgs e)
+        private async void OnTimeEvent(Object source, ElapsedEventArgs e)
         {
             if (fired == 0 && (min == 0 && sec == 0))
             {
@@ -211,7 +211,7 @@ namespace PomodoroClock
                     DialogResult r = MessageBox.Show("It is break time!", "Break Alert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     if (r == DialogResult.OK)
                     {
-                        soundPlayer.Stop(); // will stop the audio playing as alarm if it is still playing
+                        //soundPlayer.Stop(); // will stop the audio playing as alarm if it is still playing
                     }
                 }
             }
@@ -245,13 +245,23 @@ namespace PomodoroClock
             {
                 fired = 0;
                 Invoke(new Action(() => { timeLabel.Text = "Break"; timeLabel.SetBounds(189, 20, 124, 46); }));
-                soundPlayer.Play();
+                await PlaySoundAsync();
+                //soundPlayer.Play();
             } else if (timeLabel.Text == "Break" && fired == (lengths[1] * 60) && sec == 0)
             {
                 fired = 0;
                 Invoke(new Action(() => { timeLabel.Text = "Session"; timeLabel.SetBounds(165, 20, 163, 46); }));
-                soundPlayer.Play();
+                await PlaySoundAsync();
+                //soundPlayer.Play();
             }
+        }
+
+        private async Task PlaySoundAsync()
+        {
+            LoadSoundsHelperClass sounds = new();
+            sounds.PlaySound(10);
+            await Task.Delay(1000);
+            sounds.StopPlay();
         }
 
 
